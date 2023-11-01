@@ -24,7 +24,6 @@ textarea {
   width: 400px;
   margin: 0 auto;
   padding: 16px;
-  background-color: #202427;
   border: 1px solid #ccc;
   border-radius: 4px;
   color: #f0f0f0;
@@ -133,4 +132,68 @@ textarea {
 
 .checkboxContainer input:checked ~ .checkmark:after {
   display: block;
+}
+
+@media (max-width: 768px) {
+  .form_title {
+      font-size: 2rem;
+  }
+
+  .form {
+      width: 100%;
+      padding: 12px;
+  }
+
+  label {
+      font-size: medium;
+  }
+
+  textarea {
+      min-height: 150px;
+      height: 150px;
+      max-height: 150px;
+  }
+
+  .helpText {
+      font-size: 1rem;
+  }
+
+  .checkboxContainer {
+      font-size: 0.9rem;
+  }
+
+  .checkmark {
+      height: 16px;
+      width: 16px;
+  }
+
+  .checkmark:after {
+      width: 5px;
+      height: 10px;
+  }
+
+  .submitButton,
+  .cancelButton {
+      padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form_title {
+      font-size: 1.5rem;
+  }
+
+  label {
+      font-size: small;
+  }
+
+  .buttonContainer {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .submitButton,
+  .cancelButton {
+      width: 100%;
+  }
 }

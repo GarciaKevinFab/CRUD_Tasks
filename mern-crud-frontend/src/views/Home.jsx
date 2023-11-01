@@ -10,10 +10,10 @@ import {
   deleteTask,
 } from "../services/taskService";
 import styles from "../styles/Home.module.css";
+import { toast } from 'react-toastify';
 
 const Home = () => {
   const [data, setData] = useState([]);
-  const [showEditModal, setShowEditModal] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
@@ -54,7 +54,7 @@ const Home = () => {
 
       setData((prevData) => [createdTask, ...prevData]);
     }
-    setShowEditModal(false);
+
   };
 
   const onCancel = () => {
@@ -108,14 +108,17 @@ const Home = () => {
         .then(() => {
           const updatedTasks = data.filter((t) => t._id !== selectedTask._id);
           setData(updatedTasks);
+          toast.success("Tarea eliminada con éxito!");  
         })
         .catch((error) => {
           console.error("Error al eliminar la tarea:", error);
+          toast.error("Error al eliminar la tarea. Inténtalo de nuevo.");  
         });
       setShowConfirmModal(false);
       setSelectedTask(null);
     }
   };
+  
 
   const handleCancelDeletion = () => {
     setShowConfirmModal(false);
@@ -123,7 +126,7 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containers}>
       <Header />
       <div className={styles.content}>
         <div className={styles.formcontainer}>
@@ -153,7 +156,7 @@ const Home = () => {
           onConfirm={handleConfirmDeletion}
         />
       )}
-    </div>
+   </div>
   );
 };
 

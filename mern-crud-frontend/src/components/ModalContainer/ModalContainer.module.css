@@ -7,9 +7,12 @@
     padding: 30px;
     max-width: 600px;
     width: 90%;
-    margin: 5% auto;
-    position: relative;
+    position: absolute; 
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     overflow: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .modalHeader {
@@ -19,9 +22,9 @@
     font-weight: 700;
     letter-spacing: 1.2px;
     font-size: 1.5em;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .closeButton {
@@ -32,7 +35,12 @@
     padding: 8px 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
+
+.closeButton:hover {
+    background-color: #000; 
+    color: #FFF; 
 }
 
 .modalBody {
@@ -42,5 +50,24 @@
 
 .title {
     font-weight: 600;
-    margin: 0; 
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .modalContent {
+        width: 80%; 
+        padding: 20px; 
+    }
+
+    .modalHeader {
+        font-size: 1.3em; 
+    }
+
+    .closeButton {
+        padding: 6px 12px; 
+    }
+
+    .modalBody {
+        font-size: 1em; 
+    }
 }

@@ -2,26 +2,33 @@
   height: 80px;
   width: 100%;
   display: flex;
-  align-items: center;
-  padding: 0 16px; /* Espaciado interno */
-  /* Header.module.css */
-
+  justify-content: center;
+  align-items: center; 
+  padding: 0 16px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 80px; /* Ajusta la altura según tus necesidades */
-  /* background-color: #020213;Color de fondo del encabezado */
-  color: #fff; /* Color del texto */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px; /* Espaciado interno */
-  z-index: 100; /* Ajusta el valor de z-index según sea necesario */
+  background-color: #202427;
+  color: #fff;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 2rem; /* Tamaño de fuente para el título */
-  color: #fff; /* Color del texto en blanco */
+  font-size: 2rem;
+  color: #fff;
   font-weight: 800;
+  text-align: center; 
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    padding: 0 10px;
+    height: 60px;
+  }
 }

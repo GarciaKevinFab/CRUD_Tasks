@@ -3,37 +3,40 @@
   height: 85vh;
   display: grid;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 50px;
   padding-top: 10px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
   overflow-y: auto;
   overflow-x: hidden;
 }
-/* Para Chrome y Safari */
+
+
+@media (min-width: 768px) {
+  
 .datatable::-webkit-scrollbar {
   background-color: #ffffff;
-  width: 12px; /* Ancho de la barra de desplazamiento */
+  width: 12px;
 }
 
 .datatable::-webkit-scrollbar-thumb {
-  background-color: #453e49; /* Color del pulgar de la barra de desplazamiento */
-  border-radius: 6px; /* Radio del borde del pulgar */
+  background-color: #453e49; 
+  border-radius: 6px; 
 }
 
 .datatable::-webkit-scrollbar-thumb:hover {
-  background-color: #deeeff; /* Color al pasar el ratón por encima */
+  background-color: #deeeff; 
 }
 
-/* Para Firefox */
+
 .datatable {
-  scrollbar-width: thin; /* Ancho de la barra de desplazamiento en Firefox */
-  scrollbar-color: #deeeff #f5f5f5; /* Color del pulgar y del fondo */
+  scrollbar-width: thin; 
+  scrollbar-color: #deeeff #f5f5f5;
 }
 
-/* Para Microsoft Edge (basado en Chromium) */
+
 .datatable {
-  scrollbar-width: thin; /* Ancho de la barra de desplazamiento en Edge (Chromium) */
-  scrollbar-color: #deeeff #f5f5f5; /* Color del pulgar y del fondo */
+  scrollbar-width: thin; 
+  scrollbar-color: #deeeff #f5f5f5; 
 }
-
+}

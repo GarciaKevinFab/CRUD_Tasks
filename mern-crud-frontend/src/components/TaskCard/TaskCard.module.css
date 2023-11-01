@@ -1,0 +1,71 @@
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 16.25px;
+  box-shadow: 0px 4px 8px rgba(226, 226, 226, 0.185);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+  transform-origin: center bottom;
+  min-height: 250px;
+  max-height: 250px;
+
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+.completed {
+  background-color: #ff2032; 
+}
+
+.notcompleted {
+  background-color: #d7e2db; 
+}
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #20201f;
+  text-align: left;
+  
+}
+
+p {
+  font-size: 1.2rem;
+  color: #2a2b2b;
+  text-align: justify;
+  font-weight: 500;
+}
+.description {
+  max-height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.action-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+}
+
+.button, .buttonDelete, .buttonEdit {
+  background-color: #202427;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttonDelete:hover {
+  background-color: #ff2032;
+}
+.buttonEdit:hover {
+  background-color: #0557d3;
+}
+.buttonView:hover {
+  background-color: #eeb312;
+}

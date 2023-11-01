@@ -1,0 +1,27 @@
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px; /* Espaciado interno */
+  /* Header.module.css */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* Ajusta la altura según tus necesidades */
+  /* background-color: #020213;Color de fondo del encabezado */
+  color: #fff; /* Color del texto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Espaciado interno */
+  z-index: 100; /* Ajusta el valor de z-index según sea necesario */
+}
+
+.logo {
+  font-size: 2rem; /* Tamaño de fuente para el título */
+  color: #fff; /* Color del texto en blanco */
+  font-weight: 800;
+}
